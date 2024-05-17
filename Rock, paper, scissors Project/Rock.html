@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Rock, paper,scissors.css">
+  <title>Objects on Javascript</title>
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center flex-column">
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="title col-12 text-center">Rock Paper Scissors</div>
+      <div class="col-12 col-md-4 move-icon btn" onclick="
+      playGame('Rock');
+      ">
+      ✊
+    </div>
+    <div class="col-12 col-md-4 move-icon btn" onclick="
+      playGame('Paper');
+      ">
+      🖐
+    </div>
+    <div class="col-12 col-md-4 move-icon btn" onclick="
+      playGame('Scissors');
+      ">
+      ✌
+    </div>
+    </div>
+    <div class="text-center">
+      <p class="js-result result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
+    </div>
+
+    <div>
+      <button class="reset-score-button" onclick="
+        score.Wins =  0,
+        score.Losses = 0, 
+        score.Ties = 0;
+
+        localStorage.removeItem('score');
+        scoreUpdate();
+
+        ">Reset score</button>
+        <button class="auto-play-button" onclick="
+          autoPlay();
+        ">Auto Play</button>
+    </div>  
+  </div>
+     
+
+    
+    
+    <script src="./Rock, paper, scissors.js"></script>
+</body>
+</html>
